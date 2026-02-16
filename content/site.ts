@@ -47,9 +47,9 @@ export const siteContent = {
   email: "bar.henrietta.berlin@gmail.com",
   instagram: "https://www.instagram.com/bar.henrietta.berlin/",
   websiteUrl: "https://bar-henrietta.example",
-  googleMapsUrl: "https://www.google.com/maps?q=Malplaquetstraße+28,+13347+Berlin",
+  googleMapsUrl: "https://www.google.com/maps?q=Malplaquetstra%C3%9Fe+28,+13347+Berlin",
   googleMapsEmbedUrl:
-    "https://www.google.com/maps?q=Malplaquetstraße+28,+13347+Berlin&output=embed",
+    "https://www.google.com/maps?q=Malplaquetstra%C3%9Fe+28,+13347+Berlin&output=embed",
   drinksFocus: ["Natural wine", "Beer", "Cocktails"],
   todayVibeNote: {
     de: "Heute im Fokus: sanfte Rotweine und ein ruhiger Tresen.",
