@@ -29,6 +29,7 @@ export function MoodProvider({ children }: { children: ReactNode }) {
       return;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMoodIdState(resolveMood(stored).id);
   }, []);
 
