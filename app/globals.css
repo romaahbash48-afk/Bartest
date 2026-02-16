@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base palette */
+  --background: #0b0b0d;
+  --surface: #121216;
+  --warm-cream: #f2e9da;
+  --terracotta: #b65a3c;
+  --copper: #b8774e;
+  --velvet-green: #1f3a2e;
+  --muted-gold: #c9a46a;
+  --text: #f5f0e6;
+  --text-muted: #b8b0a3;
+
+  /* Mood overrides (default = copper/gold) */
+  --accent: #b8774e;
+  --accent2: #c9a46a;
+  --glow: rgba(184, 119, 78, 0.35);
+}
+
+/* Mood-specific overrides via data-mood on body */
+[data-mood='quiet_talk'] {
+  --accent: #b65a3c;
+  --accent2: #c9a46a;
+  --glow: rgba(182, 90, 60, 0.3);
+}
+[data-mood='date_night'] {
+  --accent: #b8774e;
+  --accent2: #c9a46a;
+  --glow: rgba(184, 119, 78, 0.35);
+}
+[data-mood='buzz'] {
+  --accent: #c9a46a;
+  --accent2: #b8774e;
+  --glow: rgba(201, 164, 106, 0.35);
+}
+[data-mood='solo'] {
+  --accent: #1f3a2e;
+  --accent2: #b8774e;
+  --glow: rgba(31, 58, 46, 0.4);
+}
+[data-mood='wine'] {
+  --accent: #b65a3c;
+  --accent2: #c9a46a;
+  --glow: rgba(182, 90, 60, 0.3);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    @apply bg-background text-text antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+}
+
+/* Grain overlay for hero */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
+
+/* Button tactile press */
+.btn-press:active {
+  transform: scale(0.98);
+}
