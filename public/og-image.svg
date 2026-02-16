@@ -1,0 +1,19 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B0B0D"/>
+      <stop offset="50%" style="stop-color:#121216"/>
+      <stop offset="100%" style="stop-color:#0B0B0D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#B8774E;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0B0B0D;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <line x1="520" y1="260" x2="680" y2="260" stroke="#B8774E" stroke-width="1" opacity="0.6"/>
+  <text x="600" y="320" font-family="Georgia, serif" font-size="64" font-weight="600" fill="#F2E9DA" text-anchor="middle">Bar Henrietta</text>
+  <text x="600" y="370" font-family="system-ui, sans-serif" font-size="20" fill="#B8B0A3" text-anchor="middle" letter-spacing="4">NATURAL WINE ∑ BEER ∑ COCKTAILS</text>
+  <text x="600" y="420" font-family="system-ui, sans-serif" font-size="16" fill="#B8B0A3" text-anchor="middle" opacity="0.7">Berlin-Wedding ∑ Malplaquetstraﬂe 28</text>
+</svg>
